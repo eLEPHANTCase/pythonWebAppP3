@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block content %}
+<form action="/edit/{{escort.id}}" method="post">
+    <div class="row">
+        <div class="col">
+            <label for="escortYear">Escort Year</label>
+            <input id="escortYear" type="text" class="form-control" placeholder="Escort Year" name="escortYear" value="{{escort.escortYear}}">
+        </div>
+        <div class="col">
+            <label for="escortMiles">Escort Miles</label>
+            <input id="escortMiles" type="text" class="form-control" placeholder="Escort Miles"
+                   name="escortMiles" value="{{escort.escortMiles}}">
+        </div>
+        <div class="col">
+            <label for="escortPrice">Escort Price</label>
+            <input id="escortPrice" type="text" class="form-control" placeholder="Escort Price" name="escortPrice" value="{{escort.escortPrice}}">
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-success">DELETE</button>
+
+</form>
+{% endblock %}

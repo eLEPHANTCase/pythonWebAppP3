@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block content %}
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Escort ID</th>
+        <th scope="col">Escort Year</th>
+        <th scope="col">Escort Miles</th>
+        <th scope="col">Escort Price</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for escort in escorts %}
+    <tr>
+        <td><a href="view/{{escort.id}}">Select: {{ escort.id }}</a></td>
+        <td>{{ escort.escortYear }}</td>
+        <td>{{ escort.escortMiles }}</td>
+        <td>{{ escort.escortPrice }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

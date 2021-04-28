@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="card" class="m-5 p-2">
+    <h5 class="card-title">{{ escort.escort_id }} - {{ escort.escortYear }} - {{ escort.escortMiles }}</h5>
+
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">{{ escort.escortYear }}</li>
+        <li class="list-group-item">{{ escort.escortMiles }}</li>
+        <li class="list-group-item">{{ escort.escortPrice }}</li>
+    </ul>
+    <div class="card-body">
+        <a href="/edit/{{escort.id}}" class="card-link btn btn-primary">edit</a>
+    </div>
+</div>
+<form action="/delete/{{escort.id}}" method="post"><button type="submit" class="btn btn-danger">DELETE</button></form>
+
+
+{% endblock %}
